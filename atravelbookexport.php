@@ -544,8 +544,7 @@ Basic options:
  -e	Show End-Placemark in KML-Filename
  -c	Use different line Color (e.g. -c99AAFF00)
  -l	Use different line thickness (e.g. -l1)
- -r 	
-
+ -r 	Only show the last n Words of the Addresses (For only showing the city) in the KML File (e.g. -r1)
  -h	Show this help
 
 
