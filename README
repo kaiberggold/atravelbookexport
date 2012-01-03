@@ -1,0 +1,6 @@
+Little Script to export the travelbook-data from sygic aura navigation app (Only Tested on android)
+Usage: Export the log-files from the folder aura/res/travelbook, and then apply script e.g.:
+atravelbookexport.php -v1 -tk filename.log
+Export can be done as tab seperated values (-tt), a short tab with only one row (-ts) and as kml-File (-tk)
+Tested on version 11.2.3 (use -v2) and an the version present at June 2011 (use -v1)
+
