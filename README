@@ -1,13 +1,22 @@
 atravelbookexport Version 1.1
-Author: Kai Berggold
-Description: Little Script to export the travelbook-data from sygic aura navigation app (Only Tested on android)
-It is written in the script language PHP (www.php.net). PHP is mostly used for programming dynamic websites, but can also be used for other things...
-What you have to do: Export the log-files from the folder aura/res/travelbook from the sd card on yout computer (with a php-interpreter), and then apply script.
-Under  Linux this can usually done by installing php via the package management system of the distribuion you use, making the script executable and running it on the command shell.
+Author: 
+	Kai Berggold
+Description: 
+	Little Script to export the travelbook-data from sygic aura navigation app (Only Tested on android)
+	It is written in the script language PHP (www.php.net). PHP is mostly used for programming dynamic websites, but can also be used for other things...
+	What you have to do: Export the log-files from the folder aura/res/travelbook from the sd card on yout computer (with a php-interpreter), and then apply script.
+	Output is written on the standard output and can be piped in a file.
+Linux:
+	Under  Linux this can usually done by installing php via the package management system of the distribuion you use, making the script executable and running it on the command shell.
 
-Tested on the aura version 11.2.3 (use -v2) and an the version present at June 2011 (use -v1)
+Windows:
+	Download the php interpreter from www.php.net, install it, run cmd.exe, and type a command like in the example below
+
+Version of Aura:
+	Tested on the aura version 11.2.3 (use -v2) and an the version present at June 2011 (use -v1)
 
 Usage:   atravelbookexport [options] filename [filenames]
+
 
 Basic options:
  -t	Output type (required)
@@ -26,5 +35,9 @@ Examples:
 
 KML-output:
 atravelbookexport.php -v1 -tk   -l4 -s  -r1 -c330066FF  110419_165356.log >output.kml
+
+With Windows you have to type something like this (see output of php -h):
+
+php -f atravelbookexport.php -- -v1 -tk   -l4 -s  -r1 -c330066FF  110419_165356.log >output.kml
 
 
