@@ -529,8 +529,14 @@ while ($key = array_pop($pruneargv)) unset($argv[$key]);
 if (isset($options["h"]))
 {
 ?>
-atravelbookexport Version 1.0
+atravelbookexport Version 1.1
 Author: Kai Berggold
+Description: Little Script to export the travelbook-data from sygic aura navigation app (Only Tested on android)
+It is written in the script language PHP (www.php.net). PHP is mostly used for programming dynamic websites, but can also be used for other things...
+What you have to do: Export the log-files from the folder aura/res/travelbook from the sd card on yout computer (with a php-interpreter), and then apply script.
+Under  Linux this can usually done by installing php via the package management system of the distribuion you use, making the script executable and running it on the command shell.
+
+Tested on the aura version 11.2.3 (use -v2) and an the version present at June 2011 (use -v1)
 
 Usage:   atravelbookexport [options] filename [filenames]
 
@@ -547,7 +553,10 @@ Basic options:
  -r 	Only show the last n Words of the Addresses (For only showing the city) in the KML File (e.g. -r1)
  -h	Show this help
 
+Examples:
 
+KML-output:
+atravelbookexport.php -v1 -tk   -l4 -s  -r1 -c330066FF  110419_165356.log >output.kml
 
 <?php	
 	exit();
